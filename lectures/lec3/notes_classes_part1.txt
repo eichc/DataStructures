@@ -1,0 +1,12 @@
+Lecture 3: Classes Part 1
+- encapsulaiton = grouping data and functions together
+- data abstraction = giving user access to interface, but not implementation
+- classes let you define a new type of object
+- see date.h for example class header (declares the class)
+	- see date.cpp for initialization of the class
+	- see date_main.cpp for implementation of the class
+- class header
+	- must end with semicolon after closing bracket
+	- separate blocks of declarations, as either public or private
+		- private variables
+		- public functions, including accessors and modifiers

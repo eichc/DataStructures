@@ -1,0 +1,51 @@
+Lecture 1 Continuation
+- no negative indexing (Ex: L[-1])
+- no splicing (L[:])
+- C-style Arrays
+	- fixed size, can't set size through input
+	- doesn't know it's own size
+- Strings
+	- c++ strings are mutable
+	- c-style strings are an array of chars ending in '\0'
+		- char* s1 = "hello"   <--> {'h', 'e', 'l', 'l', 'o', '\0'}
+	- creating strings:
+		std::string my_string; -> empty string
+		std::string my_string(10, ' '); -> string of 10 spaces
+		std::string my_string_2(my_string); -> creates separate copy of my_string
+		std::string my_string_2 = my_string; -> same as above
+	- can use my_string.size()
+		- returns unsigned int, not int
+	- convert c-style string to c++ string:
+		char c1[6] = "hello"; //6th spot holds '\0'
+		std::string s1(c1);
+	- reading in strings (using cin):
+		- stops when it gets to white space, doesn't include it
+		std::string temp;
+		while(cin >> temp) {       //reads in everything that has been input to the terminal
+			//some code            //as one string (temp), ignoring all white space
+		}
+
+Lecture 2: Strings and Vectors
+- example of string literal:
+	cout << "Hello!" << endl; -> "Hello!" is string literal, can't change and isn't assigned to variable
+- L-Values and R_Values
+	string a = "Kim";
+	string b = "Tom";
+	a[0] = b[0]; //a[0] is l-value, b[0] is r-value
+	- l-values are spaces that can have things assigned to them
+	- literals can only be r-values
+- Vectors
+	- "smart array"
+	- can hold objects of any type, but can't mix types in one vector
+	- size can change
+	- knows its own size
+	- declare a vector:
+		std::vector<int> scores;
+		std::vector<int> scores(100); -> creates vector with 100 uninitialized ints
+	- push_back appends a value to the end, increases size by 1
+		- O(1) operation
+- STL Sort
+	- .begin() = iterator that refers to first location in a vector, .end() refers to last location
+		- works for strings
+	- least to greatest
+	

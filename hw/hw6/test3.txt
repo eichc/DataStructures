@@ -1,0 +1,9 @@
+6 3
+
++ raptor
++ hawk
++ rat
++ sting
++ hat
++ oat
+- own
